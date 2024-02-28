@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <title>معهد الإدارة العامة</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="font-sans"
+    style="
+      background-image: url('./Images/BG3.png');
+      background-size: 100vw 80vh;
+      background-repeat: repeat-y;
+      background-position: top center;
+    "
+  >
+    <nav
+      class="bg-gray-800 bg-opacity-50 absolute top-0 left-0 right-0 z-10 text-white font-bold"
+    >
+      <div
+        class="flex flex-wrap px-40 border-b w-full place-content-between border-white/70"
+      >
+        <div class="flex gap-x-10 order-1 text-white">
+          <div class="flex border-l border-white h-full py-2 pl-6">
+            <p class="font-extrabold pl-2 text-sm">Customers@lpa.edu.sa</p>
+            <ion-icon
+              style="color: aqua; font-size: 24px"
+              name="mail-outline"
+            ></ion-icon>
+          </div>
+          <div class="flex py-2">
+            <p class="font-extrabold pl-2 text-sm">8001248877</p>
+            <ion-icon
+              style="color: rgb(0, 255, 255); font-size: 24px"
+              name="call-outline"
+            ></ion-icon>
+          </div>
+        </div>
+        <div class="order-2 flex py-2 space-x-2">
+          <p class="text-[rgb(0,255,255)] font-extrabold">تابعنا علي :</p>
+          <div class="py-1 pr-2">
+            <a href="#">
+              <ion-icon
+                style="color: white; font-size: 18px"
+                name="logo-facebook"
+              ></ion-icon
+            ></a>
+            <a href="#">
+              <ion-icon
+                style="color: white; font-size: 18px"
+                name="logo-twitter"
+              ></ion-icon
+            ></a>
+            <a href="#">
+              <ion-icon
+                style="color: white; font-size: 18px"
+                name="logo-pinterest"
+              ></ion-icon
+            ></a>
+            <a href="#">
+              <ion-icon
+                style="color: white; font-size: 18px"
+                name="logo-linkedin"
+              ></ion-icon
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto flex gap-x-40 items-center mt-3 text-sm">
+        <!-- Logo or brand name -->
+        <div>
+          <a href="/" class=""><img src="./Images/Logo.png" /></a>
+        </div>
+        <!-- Navigation Links -->
+        <div class="flex gap-3">
+          <a href="#" class="hover:bg-purple-700 p-2 rounded transition"
+            >الرئيسية
+          </a>
+          <a href="#" class="hover:bg-purple-700 p-2 rounded transition"
+            >عن المعهد</a
+          >
+          <a href="#" class="hover:bg-purple-700 p-2 rounded transition"
+            >الشهادات الإحترافية</a
+          >
+          <a href="#" class="hover:bg-purple-700 p-2 rounded transition"
+            >المكتبة الإعلامية</a
+          >
+          <a href="#" class="hover:bg-purple-700 p-2 rounded transition"
+            >اخبار المعهد </a
+          ><a href="#" class="hover:bg-purple-700 p-2 rounded transition"
+            >الإستفسارات
+          </a>
+
+          <div class="flex gap-1 text-xs">
+            <div
+              class="hover:bg-purple-700 rounded transition cursor-pointer border border-[rgb(0,255,255)] flex items-center justify-center px-2 py-0 mt-1"
+            >
+              <ion-icon
+                style="font-size: 18px; color: aqua"
+                name="globe-outline"
+              ></ion-icon>
+            </div>
+            <a
+              href="#"
+              class="hover:bg-purple-700 px-5 rounded-xl transition flex items-center justify-center bg-[rgb(0,255,255)]"
+              >دخول
+            </a>
+            <a
+              href="#"
+              class="hover:bg-purple-700 px-5 rounded-xl transition flex items-center justify-center bg-[rgb(0,255,255)]"
+              >مستخدم جديد
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Main hero section -->
+    <div
+      class="h-[80vh]"
+      style="
+        background-image: url('./Images/Hero2.avif');
+        background-size: cover;
+        background-position: center center;
+      "
+    >
+      <div class="mr-44 ml-96 text-white">
+        <p class="text-base pt-64">معهد الإدارة العامة</p>
+        <h1 class="text-6xl pt-12 font-extrabold">
+          شهادات إحترافية تنمي الموارد البشرية و تلحق بها نحو المستقبل الواعد.
+        </h1>
+        <button
+          class="mt-10 border-white/20 border px-6 py-2 rounded-xl font-extrabold text-white"
+        >
+          تواصل معنا
+        </button>
+      </div>
+    </div>
+    <!-- Main content section -->
+    <div class="mt-24 text-center">
+      <h2 class="text-cyan-500 font-extrabold text-2xl">الشهادات الإحترافية</h2>
+      <h3 class="text-slate-900 font-extrabold text-4xl">
+        الشهادات المقدمة من قبل مركز الاعمال
+      </h3>
+      <!-- List Items -->
+      <div
+        class="mx-4 mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+      >
+        <!-- Card 1 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img
+            class="w-full"
+            src="./Images/CertList/one.jpeg"
+            alt="Description"
+          />
+          <div class="p-4">
+            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
+            <p class="text-sm text-slate-600">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
+              reiciendis sit perspiciatis consequuntur sed rem magnam
+              dignissimos aut eum sapiente alias fugiat, nostrum saepe
+              assumenda!
+            </p>
+            <button
+              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+        <!--Card 2-->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img
+            class="w-full"
+            src="./Images/CertList/two.jpeg"
+            alt="Description"
+          />
+          <div class="p-4">
+            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
+            <p class="text-sm text-slate-600">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
+              reiciendis sit perspiciatis consequuntur sed rem magnam
+              dignissimos aut eum sapiente alias fugiat, nostrum saepe
+              assumenda!
+            </p>
+            <button
+              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+        <!--Card 3-->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img
+            class="w-full"
+            src="./Images/CertList/three.jpeg"
+            alt="Description"
+          />
+          <div class="p-4">
+            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
+            <p class="text-sm text-slate-600">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
+              reiciendis sit perspiciatis consequuntur sed rem magnam
+              dignissimos aut eum sapiente alias fugiat, nostrum saepe
+              assumenda!
+            </p>
+            <button
+              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+        <!--Card 4-->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img
+            class="w-full"
+            src="./Images/CertList/four.jpeg"
+            alt="Description"
+          />
+          <div class="p-4">
+            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
+            <p class="text-sm text-slate-600">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
+              reiciendis sit perspiciatis consequuntur sed rem magnam
+              dignissimos aut eum sapiente alias fugiat, nostrum saepe
+              assumenda!
+            </p>
+            <button
+              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+        <!--Card 5-->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img
+            class="w-full"
+            src="./Images/CertList/five.jpeg"
+            alt="Description"
+          />
+          <div class="p-4">
+            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
+            <p class="text-sm text-slate-600">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
+              reiciendis sit perspiciatis consequuntur sed rem magnam
+              dignissimos aut eum sapiente alias fugiat, nostrum saepe
+              assumenda!
+            </p>
+            <button
+              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+        <!--Card 6-->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img
+            class="w-full"
+            src="./Images/CertList/six.jpeg"
+            alt="Description"
+          />
+          <div class="p-4">
+            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
+            <p class="text-sm text-slate-600">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
+              reiciendis sit perspiciatis consequuntur sed rem magnam
+              dignissimos aut eum sapiente alias fugiat, nostrum saepe
+              assumenda!
+            </p>
+            <button
+              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+        <!--Card 7-->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img
+            class="w-full"
+            src="./Images/CertList/seven.jpeg"
+            alt="Description"
+          />
+          <div class="p-4">
+            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
+            <p class="text-sm text-slate-600">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
+              reiciendis sit perspiciatis consequuntur sed rem magnam
+              dignissimos aut eum sapiente alias fugiat, nostrum saepe
+              assumenda!
+            </p>
+            <button
+              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+        <!--Card 8-->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img
+            class="w-full"
+            src="./Images/CertList/eight.jpeg"
+            alt="Description"
+          />
+          <div class="p-4">
+            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
+            <p class="text-sm text-slate-600">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
+              reiciendis sit perspiciatis consequuntur sed rem magnam
+              dignissimos aut eum sapiente alias fugiat, nostrum saepe
+              assumenda!
+            </p>
+            <button
+              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+        <!--Card 9-->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img
+            class="w-full"
+            src="./Images/CertList/nine.jpeg"
+            alt="Description"
+          />
+          <div class="p-4">
+            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
+            <p class="text-sm text-slate-600">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
+              reiciendis sit perspiciatis consequuntur sed rem magnam
+              dignissimos aut eum sapiente alias fugiat, nostrum saepe
+              assumenda!
+            </p>
+            <button
+              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+        <!--Card 10-->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img
+            class="w-full"
+            src="./Images/CertList/ten.jpeg"
+            alt="Description"
+          />
+          <div class="p-4">
+            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
+            <p class="text-sm text-slate-600">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
+              reiciendis sit perspiciatis consequuntur sed rem magnam
+              dignissimos aut eum sapiente alias fugiat, nostrum saepe
+              assumenda!
+            </p>
+            <button
+              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="mt-8 text-white bg-[#08bab6] px-10 rounded-lg font-bold py-3"
+      >
+        عرض جميع الشهادات
+      </button>
+    </div>
+    <!-- About us section -->
+    <div class="mt-24 bg-white">
+      <div class="">
+        <!-- About -->
+        <div class="flex justify-center pt-32 gap-x-10">
+          <div class="w-3/12 ">
+            <img src="./Images/About.png" class="h-full" />
+          </div>
+          <div class="w-4/12">
+            <h2 class="text-xl text-[#08bab6] font-bold">كل شئ عن المعهد</h2>
+            <h3 class="text-3xl text-blue-950 pt-5 font-bold">
+              معهد الإدارة العامة
+            </h3>
+            <h3 class="text-3xl text-blue-950 pb-6 font-bold">
+              بالتعاون مع مركز ريادة الأعمال
+            </h3>
+            <p class="text-gray-600 text-lg">
+              إن الرؤية الطموحة المملكة العربية السعودية 2030 تمثل تحدياً
+              تاريخياً لبناء وتصوير الفيدات الإدارية لبنك قدمت العديمية تطوير
+              العيادة مجموعة من الحلول والبرامج القيادية لبناء وتصوير كافة
+              مستويات القيادات الإدارية المتولى قيادة مسارات التنمية الشاملة
+              والانطلاق بها نحوالمستقبل الواعد
+            </p>
+            <div class="flex flex-wrap mt-8">
+              <div class="w-1/2 flex pb-4">
+                <ion-icon
+                  style="color: #08bab6; font-size: 28px"
+                  name="checkmark-circle"
+                ></ion-icon>
+                <p class="text-lg text-gray-700 font-bold">سهولة</p>
+              </div>
+              <div class="w-1/2 flex">
+                <ion-icon
+                  style="color: #08bab6; font-size: 28px"
+                  name="checkmark-circle"
+                ></ion-icon>
+                <p class="text-lg text-gray-700 font-bold">مدربون احترافيون</p>
+              </div>
+              <div class="w-1/2 flex">
+                <ion-icon
+                  style="color: #08bab6; font-size: 28px"
+                  name="checkmark-circle"
+                ></ion-icon>
+                <p class="text-lg text-gray-700 font-bold">عشرات التخصصات</p>
+              </div>
+              <div class="w-1/2 flex">
+                <ion-icon 
+                  style="color: #08bab6; font-size: 28px"
+                  name="checkmark-circle"
+                ></ion-icon>
+                <p class="text-lg text-gray-700 font-bold">شهادات معتمدة</p>
+              </div>
+            </div>
+            <button class="mt-10 border border-gray-700/30 py-2 px-8 rounded-lg text-blue-950 font-bold">عرض المزيد من التفاصيل</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <!-- Stats -->
+        <div>
+          <h4></h4>
+          <p></p>
+        </div>
+        <div>
+          <h4></h4>
+          <p></p>
+        </div>
+        <div>
+          <h4></h4>
+          <p></p>
+        </div>
+        <div>
+          <h4></h4>
+          <p></p>
+        </div>
+      </div>
+      <div>
+        <!-- News -->
+        <h2></h2>
+        <h3></h3>
+        <div>
+          <!--news Cards container-->
+          <div>
+            <img />
+            <h4></h4>
+            <p></p>
+            <button></button>
+          </div>
+          <div>
+            <img />
+            <h4></h4>
+            <p></p>
+            <button></button>
+          </div>
+          <div>
+            <img />
+            <h4></h4>
+            <p></p>
+            <button></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <!-- Partners -->
+      <h2></h2>
+      <div>
+        <img />
+      </div>
+      <div>
+        <img />
+      </div>
+      <div>
+        <img />
+      </div>
+      <div>
+        <img />
+      </div>
+      <div>
+        <img />
+      </div>
+      <div>
+        <img />
+      </div>
+    </div>
+    <footer>
+      <div>
+        <!--Main Footer-->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <hr />
+      <div><!--Copyrights--></div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
