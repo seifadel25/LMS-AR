@@ -11,6 +11,25 @@
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .responsive-icon {
+        color: #08bab6; /* Sets the color */
+        font-size: 14px; /* Default size */
+      }
+
+      @media (min-width: 768px) {
+        /* Tailwind's 'md' breakpoint */
+        .responsive-icon {
+          font-size: 16px; /* Larger on md screens and up */
+        }
+      }
+      @media (min-width: 1024px) {
+        /* Tailwind's 'lg' breakpoint */
+        .responsive-icon {
+          font-size: 20px; /* Even larger on lg screens and up */
+        }
+      }
+    </style>
   </head>
   <body
     class="font-sans"
@@ -25,26 +44,30 @@
       class="bg-gray-800 bg-opacity-50 absolute top-0 left-0 right-0 z-10 text-white font-bold"
     >
       <div
-        class="flex flex-wrap px-40 border-b w-full place-content-between border-white/70"
+        class="md:flex flex-wrap md:pr-40 pr-12 border-b w-full place-content-between border-white/70"
       >
         <div class="flex gap-x-10 order-1 text-white">
-          <div class="flex border-l border-white h-full py-2 pl-6">
-            <p class="font-extrabold pl-2 text-sm">Customers@lpa.edu.sa</p>
+          <div class="flex md:border-l md:border-white h-full py-2 pl-6">
+            <p class="font-extrabold pl-2 text-xs md:text-sm">
+              Customers@lpa.edu.sa
+            </p>
             <ion-icon
-              style="color: aqua; font-size: 24px"
+              style="color: #08bab6; font-size: 24px"
               name="mail-outline"
             ></ion-icon>
           </div>
           <div class="flex py-2">
-            <p class="font-extrabold pl-2 text-sm">8001248877</p>
+            <p class="font-extrabold pl-2 text-xs md:text-sm">8001248877</p>
             <ion-icon
-              style="color: rgb(0, 255, 255); font-size: 24px"
+              style="color: #08bab6; font-size: 24px"
               name="call-outline"
             ></ion-icon>
           </div>
         </div>
-        <div class="order-2 flex py-2 space-x-2">
-          <p class="text-[rgb(0,255,255)] font-extrabold">تابعنا علي :</p>
+        <div class="order-2 flex py-2 space-x-2 md:pl-28">
+          <p class="text-[#08bab6] md:text-base text-xs font-extrabold">
+            تابعنا علي :
+          </p>
           <div class="py-1 pr-2">
             <a href="#">
               <ion-icon
@@ -73,13 +96,22 @@
           </div>
         </div>
       </div>
-      <div class="container mx-auto flex gap-x-40 items-center mt-3 text-sm">
+      <div class="container mx-auto flex items-center mt-3 text-sm">
         <!-- Logo or brand name -->
-        <div>
-          <a href="/" class=""><img src="./Images/Logo.png" /></a>
+        <div class="flex">
+          <a href="/" class="order-2 lg:w-3/6 xl:mr-24"
+            ><img
+              class="w-4/6 mx-auto md:m-0 md:w-5/6"
+              src="./Images/LogoM.png"
+          /></a>
+          <button id="navbarToggle" class="md:hidden text-white w-1/6 order-1">
+            <ion-icon name="menu-outline" style="font-size: 44px"></ion-icon>
+          </button>
         </div>
         <!-- Navigation Links -->
-        <div class="flex gap-3">
+        <div
+          class="hidden md:flex md:text-xs md:font-medium lg:text-sm lg:font-semibold"
+        >
           <a href="#" class="hover:bg-purple-700 p-2 rounded transition"
             >الرئيسية
           </a>
@@ -100,39 +132,102 @@
 
           <div class="flex gap-1 text-xs">
             <div
-              class="hover:bg-purple-700 rounded transition cursor-pointer border border-[rgb(0,255,255)] flex items-center justify-center px-2 py-0 mt-1"
+              class="hover:bg-purple-700 rounded-lg transition cursor-pointer border border-[#08bab6] flex items-center justify-center px-1.5 py-0 mt-1"
             >
-              <ion-icon
-                style="font-size: 18px; color: aqua"
-                name="globe-outline"
-              ></ion-icon>
+              <ion-icon class="responsive-icon" name="globe-outline"></ion-icon>
             </div>
             <a
               href="#"
-              class="hover:bg-purple-700 px-5 rounded-xl transition flex items-center justify-center bg-[rgb(0,255,255)]"
+              class="hover:bg-purple-700 px-5 rounded-xl transition flex items-center justify-center bg-[#08bab6]"
               >دخول
             </a>
             <a
               href="#"
-              class="hover:bg-purple-700 px-5 rounded-xl transition flex items-center justify-center bg-[rgb(0,255,255)]"
+              class="hover:bg-purple-700 px-5 rounded-xl transition flex items-center justify-center bg-[#08bab6]"
+              >مستخدم جديد
+            </a>
+          </div>
+        </div>
+        <div
+          id="mobileMenu"
+          class="fixed inset-0 bg-gray-800 bg-opacity-90 z-50 hidden flex-col justify-start md:hidden"
+        >
+          <div id="mobileMenu" class="p-5 text-lg">
+            <button id="closeMenu" class="block m-4">
+              <ion-icon
+                name="close-outline"
+                style="font-size: 44px; color: #08bab6"
+              ></ion-icon>
+            </button>
+            <a href="#" class="block w-full text-white p-2 rounded transition"
+              >الرئيسية</a
+            >
+            <a href="#" class="block w-full text-white p-2 rounded transition"
+              >عن المعهد</a
+            >
+            <a href="#" class="block w-full text-white p-2 rounded transition"
+              >الشهادات الإحترافية</a
+            >
+            <a href="#" class="block w-full text-white p-2 rounded transition"
+              >المكتبة الإعلامية</a
+            >
+            <a href="#" class="block w-full text-white p-2 rounded transition"
+              >اخبار المعهد </a
+            ><a href="#" class="block w-full text-white p-2 rounded transition"
+              >الإستفسارات
+            </a>
+
+            <a
+              class="my-2 py-4 px-5 rounded-xl transition flex items-center justify-center cursor-pointer"
+            >
+              <ion-icon
+                style="font-size: 28px; color: #08bab6"
+                name="globe-outline"
+              ></ion-icon>
+            </a>
+            <a
+              href="#"
+              class="my-2 py-4 px-5 rounded-xl transition flex items-center justify-center bg-[#08bab6]"
+              >دخول
+            </a>
+            <a
+              href="#"
+              class="my-2 py-4 rounded-xl transition flex items-center justify-center bg-[#08bab6]"
               >مستخدم جديد
             </a>
           </div>
         </div>
       </div>
+      <script>
+        document
+          .getElementById("navbarToggle")
+          .addEventListener("click", function () {
+            var menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("hidden");
+          });
+        document
+          .getElementById("closeMenu")
+          .addEventListener("click", function () {
+            document.getElementById("mobileMenu").classList.add("hidden");
+          });
+      </script>
     </nav>
     <!-- Main hero section -->
     <div
-      class="h-[80vh]"
+      class="h-[80dvh]"
       style="
         background-image: url('./Images/Hero2.avif');
         background-size: cover;
         background-position: center center;
       "
     >
-      <div class="mr-44 ml-96 text-white">
-        <p class="text-base pt-64">معهد الإدارة العامة</p>
-        <h1 class="text-6xl pt-12 font-extrabold">
+      <div
+        class="xl:mr-44 lg:mr-32 md:mr-28 xl:ml-96 lg:ml-80 md:ml-52 text-white text-center md:text-right pt-10"
+      >
+        <p class="text-base pt-56 md:pt-44 lg:pt-48 xl:pt-64">
+          معهد الإدارة العامة
+        </p>
+        <h1 class="md:text-5xl lg:text-6xl text-4xl pt-12 font-extrabold">
           شهادات إحترافية تنمي الموارد البشرية و تلحق بها نحو المستقبل الواعد.
         </h1>
         <button
@@ -153,222 +248,278 @@
         class="mx-4 mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
       >
         <!-- Card 1 -->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div
+          class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden justify-between"
+        >
           <img
             class="w-full"
-            src="./Images/CertList/one.jpeg"
+            src="./Images/CertList/1.jpeg"
             alt="Description"
           />
-          <div class="p-4">
-            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
-            <p class="text-sm text-slate-600">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
-              reiciendis sit perspiciatis consequuntur sed rem magnam
-              dignissimos aut eum sapiente alias fugiat, nostrum saepe
-              assumenda!
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-blue-950 mb-2 ">
+              شهادة أخصائي محترف في القيادة الإدارية CBP- LS
+            </h4>
+            <p class="text-sm text-slate-600 flex-1">
+              تأويد المتدربين والمباني والمفاهيم والمنهجيات الأساسية في مجال
+              الشركة الإدارية<br />
+              وذلك من خلال تدريبات عملية والسيناريوهات محاكية لمواقف الحياة.
+              الحقيقية بهدف تطوير مهارات المتدرس القيادية واكسابهم المانسيات
+              القيادة المناسية والقمامة في بنات العمل المختلفة
             </p>
             <button
-              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+              class="m-4 mt-12 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 w-fit mx-auto py-2"
             >
-              Learn More
+              تعرف علي المزيد
             </button>
           </div>
         </div>
         <!--Card 2-->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div
+          class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden justify-between"
+        >
           <img
             class="w-full"
-            src="./Images/CertList/two.jpeg"
+            src="./Images/CertList/2.jpeg"
             alt="Description"
           />
-          <div class="p-4">
-            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
-            <p class="text-sm text-slate-600">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
-              reiciendis sit perspiciatis consequuntur sed rem magnam
-              dignissimos aut eum sapiente alias fugiat, nostrum saepe
-              assumenda!
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-blue-950 mb-2 ">
+              شهادة محترف معتمد من أدوبي في التصميم ACP
+            </h4>
+            <p class="text-sm text-slate-600 flex-1">
+              نعم احتياجات السوق المحلية بامراد ذوي مهارات عالية في الرافع
+              التصميم الجرافيك <br />حيث تعندهم القدرة على العمل في بيئة مختصة
+              بالتصحيح مما يقدم الدعم للمؤسسات والشركات في هذا المجال وذلك بعدم
+              اللجوء إلى جهات خليجية للتصميم مما يقتل من التكاليف وتزيد من معدل
+              الإنتاج.
             </p>
             <button
-              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+              class="m-4 mt-12 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 w-fit mx-auto py-2"
             >
-              Learn More
+              تعرف علي المزيد
             </button>
           </div>
         </div>
         <!--Card 3-->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div
+          class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden justify-between"
+        >
           <img
             class="w-full"
-            src="./Images/CertList/three.jpeg"
+            src="./Images/CertList/3.jpeg"
             alt="Description"
           />
-          <div class="p-4">
-            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
-            <p class="text-sm text-slate-600">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
-              reiciendis sit perspiciatis consequuntur sed rem magnam
-              dignissimos aut eum sapiente alias fugiat, nostrum saepe
-              assumenda!
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-blue-950 mb-2 truncate">
+              المحاسب الإداري المعتمد CMA
+            </h4>
+            <p class="text-sm text-slate-600 flex-1">
+              تزويد الفرد والخبرة الإدارية والمالية اللازمة ليصبح مؤمد الإدارة
+              التقارير. المالية بالمؤسسات وتحديد العراق الاستثمارية وإدارتها مع
+              الديار مروى والاستشارات المالية الأصحاب القرار<br />
+
+              بالإضافة إلى المساعدة في التغلب على المخاطر الداخلية والخارجية
+              للشركات وضمان امتثالها للقوانين التشريعية والتوحيد التنظيمية
             </p>
             <button
-              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+              class="m-4 mt-12 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 w-fit mx-auto py-2"
             >
-              Learn More
+              تعرف علي المزيد
             </button>
           </div>
         </div>
         <!--Card 4-->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div
+          class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden justify-between"
+        >
           <img
             class="w-full"
-            src="./Images/CertList/four.jpeg"
+            src="./Images/CertList/4.jpeg"
             alt="Description"
           />
-          <div class="p-4">
-            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
-            <p class="text-sm text-slate-600">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
-              reiciendis sit perspiciatis consequuntur sed rem magnam
-              dignissimos aut eum sapiente alias fugiat, nostrum saepe
-              assumenda!
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-blue-950 mb-2 truncate">
+              شهادة المدقق الداخلي CIA
+            </h4>
+            <p class="text-sm text-slate-600 flex-1">
+              تساعد هذه الشهادة في اعداد جيل جديد من المدققين الداخليين العرب
+              المتعاين تامين معتراً علمياً <br />
+
+              المواجهة التحديات الاقتصادية التي يواجهها العالم العربي في عصر
+              العولمة
             </p>
             <button
-              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+              class="m-4 mt-12 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 w-fit mx-auto py-2"
             >
-              Learn More
+              تعرف علي المزيد
             </button>
           </div>
         </div>
         <!--Card 5-->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div
+          class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden justify-between"
+        >
           <img
             class="w-full"
-            src="./Images/CertList/five.jpeg"
+            src="./Images/CertList/5.jpeg"
             alt="Description"
           />
-          <div class="p-4">
-            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
-            <p class="text-sm text-slate-600">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
-              reiciendis sit perspiciatis consequuntur sed rem magnam
-              dignissimos aut eum sapiente alias fugiat, nostrum saepe
-              assumenda!
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-blue-950 mb-2 truncate">
+              شهادة تكنولوجيا الحاسب الآلي CBP-CT
+            </h4>
+            <p class="text-sm text-slate-600 flex-1">
+              تهيئة المتدربين وبالأخص الموظفين الجدد في مجال الحاسب الآلي إلي
+              سوق العمل الحديث
+              <br />
+              حيث يلقي الضوء على المبادئ والمفاهيم والعمليات الأساسية خلال
+              تعريفهم على أحدث العمليات في مجال الحاسب الالي والمهارات
+              والمنهجيات التي تتيح لهم الاستفادة القصوى من خبراتهم
             </p>
             <button
-              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+              class="m-4 mt-12 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 w-fit mx-auto py-2"
             >
-              Learn More
+              تعرف علي المزيد
             </button>
           </div>
         </div>
         <!--Card 6-->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div
+          class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden justify-between"
+        >
           <img
             class="w-full"
-            src="./Images/CertList/six.jpeg"
+            src="./Images/CertList/6.jpeg"
             alt="Description"
           />
-          <div class="p-4">
-            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
-            <p class="text-sm text-slate-600">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
-              reiciendis sit perspiciatis consequuntur sed rem magnam
-              dignissimos aut eum sapiente alias fugiat, nostrum saepe
-              assumenda!
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-blue-950 mb-2 truncate">
+              ادارة المشاريع الاحترافية PMP
+            </h4>
+            <p class="text-sm text-slate-600 flex-1">
+              تعزيز المعارف وتنمية المهارات الإدارية والقيادية بالإضافة إلى
+              التعرف على استراتيجيات ومنهجيات إدارة المشاريع وكيفية تطبيقها
+              بفاعلية داخل المؤسسات
+              <br />
+              وتعتبر من أقدم الشهادات الاحترافية وأكثرها تقديراً على مستوى
+              العالم في مجال إدارة المشاريع، وهي أحد أهم معايير تقييم مديري
+              المشاريع في جميع أنحاء العالم.
             </p>
             <button
-              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+              class="m-4 mt-12 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 w-fit mx-auto py-2"
             >
-              Learn More
+              تعرف علي المزيد
             </button>
           </div>
         </div>
         <!--Card 7-->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div
+          class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden justify-between"
+        >
           <img
             class="w-full"
-            src="./Images/CertList/seven.jpeg"
+            src="./Images/CertList/7.jpeg"
             alt="Description"
           />
-          <div class="p-4">
-            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
-            <p class="text-sm text-slate-600">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
-              reiciendis sit perspiciatis consequuntur sed rem magnam
-              dignissimos aut eum sapiente alias fugiat, nostrum saepe
-              assumenda!
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-blue-950 mb-2 truncate">
+              أخصائي مايكروسوفت أوفيس MOS
+            </h4>
+            <p class="text-sm text-slate-600 flex-1">
+              دعم المتدربين على إتقان برامج Microsoft office والتعريف بأساسيات
+              ومهارات كل برنامج وأدواته ومميزاته والكيفية الصحيحة لتفعيله بما
+              يحقق الاستفادة القصوى من الإمكانيات الخاصة بالبرامج في تحسين
+              أعمالهم
+              <br />
+              ويعتبر هذا البرنامج مؤهلا لاجتياز اختبار الشهادة المعتمدة دوليا
+              والنجاح فيها للحصول على شهادة MOS
             </p>
             <button
-              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+              class="m-4 mt-12 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 w-fit mx-auto py-2"
             >
-              Learn More
+              تعرف علي المزيد
             </button>
           </div>
         </div>
         <!--Card 8-->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div
+          class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden justify-between"
+        >
           <img
             class="w-full"
-            src="./Images/CertList/eight.jpeg"
+            src="./Images/CertList/8.jpeg"
             alt="Description"
           />
-          <div class="p-4">
-            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
-            <p class="text-sm text-slate-600">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
-              reiciendis sit perspiciatis consequuntur sed rem magnam
-              dignissimos aut eum sapiente alias fugiat, nostrum saepe
-              assumenda!
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-blue-950 mb-2">
+              الشهادة الدولية في اللوجستيات والنقل CILT
+            </h4>
+            <p class="text-sm text-slate-600 flex-1">
+              تعد الشهادة الدولية في اللوجستيات والنقل CILT المعتمدة من معهد
+              تشارترد للوجستيات والنقل (المملكة المتحدة) نقطة انطلاق نحو دور
+              قيادي استراتيجي في هذا المجال.
+              <br />
+              يمنح البرنامج التدريبي CILT - المستوى 5 في الخدمات اللوجستية
+              والنقل المهارات اللازمة والإحتياجات الحديثة لإحداث فرق لدى محترفيه
+              من مختلف التخصصات وفي عدة قطاعات
             </p>
             <button
-              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+              class="m-4 mt-12 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 w-fit mx-auto py-2"
             >
-              Learn More
+              تعرف علي المزيد
             </button>
           </div>
         </div>
         <!--Card 9-->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div
+          class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden justify-between"
+        >
           <img
             class="w-full"
-            src="./Images/CertList/nine.jpeg"
+            src="./Images/CertList/9.jpeg"
             alt="Description"
           />
-          <div class="p-4">
-            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
-            <p class="text-sm text-slate-600">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
-              reiciendis sit perspiciatis consequuntur sed rem magnam
-              dignissimos aut eum sapiente alias fugiat, nostrum saepe
-              assumenda!
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-blue-950 mb-2 truncate">
+              شهادة الهاكر الأخلاقي CEH
+            </h4>
+            <p class="text-sm text-slate-600 flex-1">
+              تعتبر دورة CEH الأكثر تقدما في العالم مع 20 مجال من أحدث مجالات
+              الأمن التي يرغب أي فرد في معرفتها <br />
+              عندما يخططون لتعزيز وضع أمن المعلومات في مؤسستهم.
             </p>
             <button
-              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+              class="m-4 mt-12 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 w-fit mx-auto py-2"
             >
-              Learn More
+              تعرف علي المزيد
             </button>
           </div>
         </div>
         <!--Card 10-->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div
+          class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden justify-between"
+        >
           <img
             class="w-full"
-            src="./Images/CertList/ten.jpeg"
+            src="./Images/CertList/10.jpeg"
             alt="Description"
           />
-          <div class="p-4">
-            <h4 class="font-bold text-blue-950">Lorem ipsum dolor sit amet.</h4>
-            <p class="text-sm text-slate-600">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
-              reiciendis sit perspiciatis consequuntur sed rem magnam
-              dignissimos aut eum sapiente alias fugiat, nostrum saepe
-              assumenda!
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-blue-950 mb-2 truncate">
+              + CYBER SERURITY شهادة الأمن السيبراني
+            </h4>
+            <p class="text-sm text-slate-600 flex-1">
+              أول شهادة أمنية يجب أن تكسبها في مجال أمن المعلومات أو الأمن
+              السيبراني وتغطي مجموعة واسعة من ممارسات الأمان للمبتدئين وتساعد
+              على بناء شبكات وأنظمة أكثر أمانًا <br />
+              تحظى باحترام واسع باعتبارها شهادة أمان للمبتدئين ومعترف بها
+              دولياً.
             </p>
             <button
-              class="mt-3 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 py-2"
+              class="m-4 mt-12 text-blue-950 border font-bold border-gray-500/35 rounded-lg px-4 w-fit mx-auto py-2"
             >
-              Learn More
+              تعرف علي المزيد
             </button>
           </div>
         </div>
@@ -385,10 +536,10 @@
       <div class="">
         <!-- About -->
         <div class="flex justify-center pt-32 gap-x-10">
-          <div class="w-3/12">
-            <img src="./Images/About.png" class="h-full" />
+          <div class="lg:w-3/12 hidden lg:block">
+            <img src="./Images/About.png" class="xl:h-full h-fit" />
           </div>
-          <div class="w-4/12">
+          <div class="lg:w-4/12 w-full mx-5 lg:mx-0 lg:text-start text-center">
             <h2 class="text-xl text-[#08bab6] font-bold">كل شئ عن المعهد</h2>
             <h3 class="text-3xl text-blue-950 pt-5 font-bold">
               معهد الإدارة العامة
@@ -396,14 +547,14 @@
             <h3 class="text-3xl text-blue-950 pb-6 font-bold">
               بالتعاون مع مركز ريادة الأعمال
             </h3>
-            <p class="text-gray-600 text-lg">
+            <p class="text-gray-600 text-lg text-start">
               إن الرؤية الطموحة المملكة العربية السعودية 2030 تمثل تحدياً
               تاريخياً لبناء وتصوير الفيدات الإدارية لبنك قدمت العديمية تطوير
               العيادة مجموعة من الحلول والبرامج القيادية لبناء وتصوير كافة
               مستويات القيادات الإدارية المتولى قيادة مسارات التنمية الشاملة
               والانطلاق بها نحوالمستقبل الواعد
             </p>
-            <div class="flex flex-wrap mt-8">
+            <div class="flex flex-wrap mt-8 lg:pr-0 md:pr-36 sm:pr-12">
               <div class="w-1/2 flex pb-4">
                 <ion-icon
                   style="color: #08bab6; font-size: 28px"
@@ -411,21 +562,21 @@
                 ></ion-icon>
                 <p class="text-lg text-gray-700 font-bold">سهولة</p>
               </div>
-              <div class="w-1/2 flex">
+              <div class="w-1/2 flex pb-4">
                 <ion-icon
                   style="color: #08bab6; font-size: 28px"
                   name="checkmark-circle"
                 ></ion-icon>
                 <p class="text-lg text-gray-700 font-bold">مدربون احترافيون</p>
               </div>
-              <div class="w-1/2 flex">
+              <div class="w-1/2 flex pb-4">
                 <ion-icon
                   style="color: #08bab6; font-size: 28px"
                   name="checkmark-circle"
                 ></ion-icon>
                 <p class="text-lg text-gray-700 font-bold">عشرات التخصصات</p>
               </div>
-              <div class="w-1/2 flex">
+              <div class="w-1/2 flex pb-4">
                 <ion-icon
                   style="color: #08bab6; font-size: 28px"
                   name="checkmark-circle"
@@ -450,20 +601,22 @@
         "
       >
         <!-- Stats -->
-        <div class="flex w-full place-content-between text-center px-20 mx-4">
-          <div class="w-3/12">
+        <div
+          class="flex w-full flex-wrap gap-y-10 place-content-between text-center md:px-20 md:mx-4"
+        >
+          <div class="md:w-3/12 w-6/12">
             <h4 class="text-white font-bold text-3xl">10,000+</h4>
             <p class="text-white font-bold text-xs">عدد المدربين</p>
           </div>
-          <div class="w-3/12">
+          <div class="md:w-3/12 w-6/12">
             <h4 class="text-white font-bold text-3xl">45,000+</h4>
             <p class="text-white font-bold text-xs">عدد المتدربين</p>
           </div>
-          <div class="w-3/12">
+          <div class="md:w-3/12 w-6/12">
             <h4 class="text-white font-bold text-3xl">28,000+</h4>
             <p class="text-white font-bold text-xs">عدد الشهادات</p>
           </div>
-          <div class="w-3/12">
+          <div class="md:w-3/12 w-6/12">
             <h4 class="text-white font-bold text-3xl">74%</h4>
             <p class="text-white font-bold text-xs">معدل الرضا</p>
           </div>
@@ -476,7 +629,9 @@
           اخر أخبار مركز الأعمال
         </h3>
         <div class="w-7/12 mx-auto mt-10">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6"
+          >
             <!--news Cards container-->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden w-fit">
               <div class="relative">
@@ -578,7 +733,9 @@
     <div class="bg-white py-24 text-3xl text-blue-950 font-extrabold">
       <!-- Partners -->
       <h2 class="text-center">شركائنا في تقديم المعرفة</h2>
-      <div class="flex w-7/12 mx-auto mt-10 gap-x-1">
+      <div
+        class="flex flex-wrap md:flex-nowrap w-full justify-center md:w-7/12 mx-auto mt-10 gap-x-1 gap-y-1"
+      >
         <div class="border rounded-lg border-gray-300 overflow-hidden">
           <img src="./Images/Partners/1.png" />
         </div>
@@ -684,7 +841,7 @@
           </p>
         </div>
       </div>
-      <div class="border-t border-gray-800/45 ">
+      <div class="border-t border-gray-800/45 md:text-base text-xs">
         <!--Copyrights-->
         <p dir="ltr" class="text-center py-4">
           All Rights Reserved Institute of Public Administration . Developed and
