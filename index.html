@@ -381,11 +381,11 @@
       </button>
     </div>
     <!-- About us section -->
-    <div class="mt-24 bg-white">
+    <div class="mt-24 pb-24 bg-[#eef1f6]">
       <div class="">
         <!-- About -->
         <div class="flex justify-center pt-32 gap-x-10">
-          <div class="w-3/12 ">
+          <div class="w-3/12">
             <img src="./Images/About.png" class="h-full" />
           </div>
           <div class="w-4/12">
@@ -426,96 +426,271 @@
                 <p class="text-lg text-gray-700 font-bold">عشرات التخصصات</p>
               </div>
               <div class="w-1/2 flex">
-                <ion-icon 
+                <ion-icon
                   style="color: #08bab6; font-size: 28px"
                   name="checkmark-circle"
                 ></ion-icon>
                 <p class="text-lg text-gray-700 font-bold">شهادات معتمدة</p>
               </div>
             </div>
-            <button class="mt-10 border border-gray-700/30 py-2 px-8 rounded-lg text-blue-950 font-bold">عرض المزيد من التفاصيل</button>
+            <button
+              class="mt-10 border border-gray-700/30 py-2 px-8 rounded-lg text-blue-950 font-bold"
+            >
+              عرض المزيد من التفاصيل
+            </button>
           </div>
         </div>
       </div>
-      <div>
+      <div
+        class="mt-24 flex items-center justify-center px-20"
+        style="
+          background-image: url('./Images/About2.png');
+          background-size: cover;
+          height: 30vh;
+        "
+      >
         <!-- Stats -->
-        <div>
-          <h4></h4>
-          <p></p>
-        </div>
-        <div>
-          <h4></h4>
-          <p></p>
-        </div>
-        <div>
-          <h4></h4>
-          <p></p>
-        </div>
-        <div>
-          <h4></h4>
-          <p></p>
+        <div class="flex w-full place-content-between text-center px-20 mx-4">
+          <div class="w-3/12">
+            <h4 class="text-white font-bold text-3xl">10,000+</h4>
+            <p class="text-white font-bold text-xs">عدد المدربين</p>
+          </div>
+          <div class="w-3/12">
+            <h4 class="text-white font-bold text-3xl">45,000+</h4>
+            <p class="text-white font-bold text-xs">عدد المتدربين</p>
+          </div>
+          <div class="w-3/12">
+            <h4 class="text-white font-bold text-3xl">28,000+</h4>
+            <p class="text-white font-bold text-xs">عدد الشهادات</p>
+          </div>
+          <div class="w-3/12">
+            <h4 class="text-white font-bold text-3xl">74%</h4>
+            <p class="text-white font-bold text-xs">معدل الرضا</p>
+          </div>
         </div>
       </div>
-      <div>
+      <div class="text-center mt-24">
         <!-- News -->
-        <h2></h2>
-        <h3></h3>
-        <div>
-          <!--news Cards container-->
-          <div>
-            <img />
-            <h4></h4>
-            <p></p>
-            <button></button>
-          </div>
-          <div>
-            <img />
-            <h4></h4>
-            <p></p>
-            <button></button>
-          </div>
-          <div>
-            <img />
-            <h4></h4>
-            <p></p>
-            <button></button>
+        <h2 class="font-bold text-[#08bab6]">الأخبار</h2>
+        <h3 class="text-3xl font-extrabold text-blue-950">
+          اخر أخبار مركز الأعمال
+        </h3>
+        <div class="w-7/12 mx-auto mt-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6">
+            <!--news Cards container-->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden w-fit">
+              <div class="relative">
+                <img
+                  class="object-cover w-full h-48"
+                  src="./Images/News1.jpeg"
+                  alt="Description"
+                />
+                <div
+                  class="absolute top-2 right-2 bg-white text-gray-800 text-xs font-bold rounded-full px-2 py-0 m-2"
+                >
+                  معرفة
+                </div>
+              </div>
+              <div class="p-4 text-start">
+                <h3 class="text-xs font-bold text-gray-500">ابريل , 2023</h3>
+                <h4 class="font-extrabold text-blue-950">
+                  برعاية سمو أمير نجران لقاء تطوير القيادات الشابة بالشراكة مع
+                  إمارة منطقة نجران
+                </h4>
+
+                <div
+                  class="text-sm text-blue-950 font-bold flex mt-6 cursor-pointer"
+                >
+                  <p>عرض المزيد</p>
+                  <ion-icon
+                    name="arrow-forward-outline"
+                    style="padding-top: 4px"
+                  ></ion-icon>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div class="relative">
+                <img
+                  class="object-cover w-full h-48"
+                  src="./Images/News1.jpeg"
+                  alt="Description"
+                />
+                <div
+                  class="absolute top-2 right-2 bg-white text-gray-800 text-xs font-bold rounded-full px-2 py-0 m-2"
+                >
+                  تكنولوجيا
+                </div>
+              </div>
+              <div class="p-4 text-start">
+                <h3 class="text-xs font-bold text-gray-500">يوليو , 2023</h3>
+                <h4 class="font-extrabold text-blue-950">
+                  معهد الإدارة العامة ينظم ملتقى إدارة المنظمات في القطاع غير
+                  الربحي
+                </h4>
+
+                <div
+                  class="text-sm text-blue-950 font-bold flex mt-6 cursor-pointer"
+                >
+                  <p>عرض المزيد</p>
+                  <ion-icon
+                    name="arrow-forward-outline"
+                    style="padding-top: 4px"
+                  ></ion-icon>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div class="relative">
+                <img
+                  class="object-cover w-full h-48"
+                  src="./Images/News1.jpeg"
+                  alt="Description"
+                />
+                <div
+                  class="absolute top-2 right-2 bg-white text-gray-800 text-xs font-bold rounded-full px-2 py-0 m-2"
+                >
+                  رياضة
+                </div>
+              </div>
+              <div class="p-4 text-start">
+                <h3 class="text-xs font-bold text-gray-500">يناير , 2024</h3>
+                <h4 class="font-extrabold text-blue-950">
+                  معالي الأمين العام لمجلس التعاون لدول الخليج العربية يزور معهد
+                  الإدارة العامة
+                </h4>
+
+                <div
+                  class="text-sm text-blue-950 font-bold flex mt-6 cursor-pointer"
+                >
+                  <p>عرض المزيد</p>
+                  <ion-icon
+                    name="arrow-forward-outline"
+                    style="padding-top: 4px"
+                  ></ion-icon>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div>
+    <div class="bg-white py-24 text-3xl text-blue-950 font-extrabold">
       <!-- Partners -->
-      <h2></h2>
-      <div>
-        <img />
-      </div>
-      <div>
-        <img />
-      </div>
-      <div>
-        <img />
-      </div>
-      <div>
-        <img />
-      </div>
-      <div>
-        <img />
-      </div>
-      <div>
-        <img />
+      <h2 class="text-center">شركائنا في تقديم المعرفة</h2>
+      <div class="flex w-7/12 mx-auto mt-10 gap-x-1">
+        <div class="border rounded-lg border-gray-300 overflow-hidden">
+          <img src="./Images/Partners/1.png" />
+        </div>
+        <div class="border rounded-lg border-gray-300 overflow-hidden">
+          <img src="./Images/Partners/2.png" />
+        </div>
+        <div class="border rounded-lg border-gray-300 overflow-hidden">
+          <img src="./Images/Partners/3.png" />
+        </div>
+        <div class="border rounded-lg border-gray-300 overflow-hidden">
+          <img src="./Images/Partners/4.png" />
+        </div>
+        <div class="border rounded-lg border-gray-300 overflow-hidden">
+          <img src="./Images/Partners/5.png" />
+        </div>
+        <div class="border rounded-lg border-gray-300 overflow-hidden">
+          <img src="./Images/Partners/6.png" />
+        </div>
       </div>
     </div>
-    <footer>
-      <div>
+    <footer class="bg-black text-gray-400">
+      <div class="md:flex pt-28 w-9/12 mx-auto hidden pb-16">
         <!--Main Footer-->
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class="flex flex-col w-3/12">
+          <img src="./Images/LogoFooter.png" class="w-3/6" />
+          <p class="w-4/6 mt-6">
+            شراكة مستمرة و إعتمادية لا محدودة من قبل مركز ريادة الأعمال
+          </p>
+          <div class="flex gap-x-2 mt-8">
+            <ion-icon
+              style="font-size: 30px; color: white"
+              class="border rounded-full p-2"
+              name="logo-facebook"
+            ></ion-icon>
+            <ion-icon
+              style="font-size: 30px; color: white"
+              class="border rounded-full p-2"
+              name="logo-twitter"
+            ></ion-icon>
+            <ion-icon
+              style="font-size: 30px; color: white"
+              class="border rounded-full p-2"
+              name="logo-linkedin"
+            ></ion-icon>
+          </div>
+        </div>
+        <div class="flex flex-col w-2/12">
+          <h4 class="text-white text-xl font-bold">تصفح</h4>
+          <div class="mt-6 flex flex-col gap-y-2">
+            <p>الرئيسية</p>
+            <p>عنا</p>
+            <p>ميديا</p>
+            <p>إتصل بنا</p>
+            <p>الأخبار</p>
+          </div>
+        </div>
+        <div class="flex flex-col w-4/12">
+          <h4 class="text-white text-xl font-bold">الشهادات</h4>
+          <div class="mt-6 flex flex-col gap-y-2">
+            <p>شهادة المتدفق الداخلي المعتمد CIA</p>
+            <p>شهادة محترف ادوبي للتصميم ACP</p>
+            <p>شهادة الحاسب الآلي CBP-CT</p>
+            <p>شهادة إدارة المشاريع PMP</p>
+            <p>شهادة الأمن السيبراني</p>
+          </div>
+        </div>
+        <div class="flex flex-col w-3/12">
+          <h4 class="text-white text-xl font-bold">خليك علي تواصل</h4>
+          <div class="mt-6 flex flex-col gap-y-6">
+            <div class="flex">
+              <ion-icon
+                style="font-size: 26px; color: #08bab6"
+                class="pl-2 min-h-fit"
+                name="location-outline"
+              ></ion-icon>
+              <div>
+                <p>الرياض , جدة</p>
+                <p>المملكة العربية السعودية</p>
+              </div>
+            </div>
+            <div class="flex">
+              <ion-icon
+                style="font-size: 26px; color: #08bab6"
+                class="pl-2 min-h-fit"
+                name="call-outline"
+              ></ion-icon>
+              <p>8001248877</p>
+            </div>
+            <div class="flex">
+              <ion-icon
+                style="font-size: 26px; color: #08bab6"
+                class="pl-2 min-h-fit"
+                name="mail-outline"
+              ></ion-icon>
+              <p>Customer@ipa.edu.sa</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col w-2/12">
+          <img src="./Images/LogoFooter2.png" class="w-4/6" />
+          <p class="w-full mt-6">
+            لدينا الكثير من الشهادات الإحترافية و البرامج المتعددة
+          </p>
+        </div>
       </div>
-      <hr />
-      <div><!--Copyrights--></div>
+      <div class="border-t border-gray-800/45 ">
+        <!--Copyrights-->
+        <p dir="ltr" class="text-center py-4">
+          All Rights Reserved Institute of Public Administration . Developed and
+          Designed By BeGroup.
+        </p>
+      </div>
     </footer>
     <script
       type="module"
